@@ -3,10 +3,11 @@ import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
-
-  @Get()
+  constructor() {}
+  // URI + Méthode => Je vais appeler getHello si j'ai
+  // La méthode Get et l'URI ''
+  @Get('')
   getHello(): string {
-    return this.appService.getHello();
+    return 'Hello World :D';
   }
 }
